@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { BiMessageAdd } from 'react-icons/bi';
 
 function Addheader({ onNewItem }) {
-  const [todoName, setTodoname] = useState();
-  const [dueDate, setDueDate] = useState();
+  const [todoName, setTodoname] = useState('');
+  const [dueDate, setDueDate] = useState('');
 
   const handleNameChange = (event) => {
     setTodoname(event.target.value);
