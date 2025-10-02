@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BiMessageAdd } from 'react-icons/bi';
 
 function Addheader({ onNewItem }) {
   const [todoName, setTodoname] = useState();
@@ -37,7 +38,7 @@ function Addheader({ onNewItem }) {
             value={dueDate}
             onClick={handleAddButtonClicked}
           >
-            Add
+            <BiMessageAdd />
           </button>
         </div>
       </div>
