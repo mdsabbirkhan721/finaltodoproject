@@ -11,6 +11,7 @@ function Addheader({ onNewItem }) {
   const handleDateChange = (event) => {
     setDueDate(event.target.value);
   };
+
   const handleAddButtonClicked = () => {
     onNewItem(todoName, dueDate);
     setDueDate('');
@@ -29,13 +30,12 @@ function Addheader({ onNewItem }) {
           />
         </div>
         <div className="col-4">
-          <input type="date" onChange={handleDateChange} />
+          <input type="date" value={dueDate} onChange={handleDateChange} />
         </div>
         <div className="col-2">
           <button
-            type="button"
+            type="submit"
             className="btn btn-success"
-            value={dueDate}
             onClick={handleAddButtonClicked}
           >
             <BiMessageAdd />
